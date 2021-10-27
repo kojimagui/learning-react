@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 
 import styled from "styled-components";
-import { useComplexContextHook } from "../state/ContextoComplexo";
+import { useComplexContextHook } from "../../state/ContextoComplexo";
 
-const DivWrapper = styled.div`
-  width: 80%;
-  height: 100px;
-  background-color: #f16632;
-  margin: auto;
+const Card = styled.div`
+  width: 240px;
+  height: 216px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin: 16px;
+  padding: 8px;
+  background-color: #fafafa;
+  :hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  border-radius: 5px;
 `;
 
 // Método 2 - Com hook
@@ -25,7 +32,8 @@ export default function Componenteum(props) {
   };
 
   return (
-    <DivWrapper>
+    <Card>
+      <h3>Complexo dois</h3>
       <p>{state.user.name}</p>
       <p>{state.user.email}</p>
       <input
@@ -36,14 +44,14 @@ export default function Componenteum(props) {
       <button type="button" onClick={changeName}>
         Trocar nome
       </button>
-    </DivWrapper>
+    </Card>
   );
 }
 
 //O "oldState" copia o objeto:
 //   user: {
 //     name: "Guilherme",
-//     email: "guilherme.kojima@groove.tech",
+//     email: "guilherme@mail.com",
 //   },
 //   profile: "",
 // }

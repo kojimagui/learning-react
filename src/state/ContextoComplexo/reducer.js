@@ -3,7 +3,7 @@ const initialState = {
     name: "Koda",
     email: "koda@kodinha",
   },
-  profile: "",
+  job: "",
 };
 
 const stateReducer = (state, action) => {
@@ -19,7 +19,7 @@ const stateReducer = (state, action) => {
     case "CHANGE_PROFILE":
       return {
         ...state,
-        profile: action.payload,
+        job: action.payload,
       };
     default:
       return initialState;

@@ -1,0 +1,2 @@
+export const USER_CHANGE_NAME = 'CHANGE_NAME'
+export const USER_CHANGE_JOB = 'CHANGE_JOB'

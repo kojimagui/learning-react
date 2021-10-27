@@ -2,22 +2,14 @@ import React, { createContext, useContext, useState } from "react";
 
 // Criar um contexto
 const SimpleContext = createContext();
-//   {
-//   user:{
-//     nome: '',
-//     email: ''
-//   },
-//   cargo: '',
-// }
 
 // Criar um provider
 const SimpleContextProvider = (props) => {
-  // props.children
   const { children } = props;
   const [state, setState] = useState({
     user: {
       name: "Guilherme",
-      email: "guilherme.kojima@groove.tech",
+      email: "guilherme@mail.com",
     },
     profile: "",
   });
