@@ -15,6 +15,7 @@ const Card = styled.div`
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
   border-radius: 5px;
+  text-align: center;
 `;
 
 export default function RxJsDois(props) {
