@@ -14,6 +14,11 @@ import ReduxDois from "../components/Redux/ReduxDois";
 import RxJsUm from "../components/RxJs/RxJsUm";
 import RxJsDois from "../components/RxJs/RxJsDois";
 
+import MobxUm from "../components/Mobx/MobxUm";
+import MobxDois from "../components/Mobx/MobxDois";
+import userStore from "../state/Mobx/user.store";
+import jobStore from "../state/Mobx/job.store";
+
 const MainGrid = styled.div`
   display: grid;
   grid-template-columns: 288px 288px 288px 288px;
@@ -56,6 +61,10 @@ function Main() {
         <Wrapper>
           <RxJsUm />
           <RxJsDois />
+        </Wrapper>
+        <Wrapper>
+          <MobxUm userState={userStore} />
+          <MobxDois userState={userStore} jobState={jobStore} />
         </Wrapper>
       </MainGrid>
     </>
